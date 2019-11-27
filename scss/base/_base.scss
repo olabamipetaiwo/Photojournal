@@ -1,19 +1,17 @@
-$orange_light:#ffb988;
-$orange_dark:#ff7730;
-$green_light:#7ed56f;
-$green_dark: #28b485;
-$blue_light:#2998ff;
-$blue_dark:#5643fa;
-
-$color_primary: #55c57a;
-$color_primary_light:#7ed56f;
-$color_primary_dark: #28b485;
 $color_grey_dark: #777;
 $color_white:  #fff;
 $color_black:rgb(15, 14, 14);
 $color_grey_light_1: #f7f7f7;
 $color_grey_light_2: #999;
 $color_grey_light_3: #333;
+
+$dark_grey:#4a4a48;
+$deep_grey:#4c4c4c;
+$light_grey:#333333;
+$grey:#edf0f5;
+$white:#ffffff;
+$blue:#3e84d9;
+$black:#121212;
 
 
 * {
@@ -62,7 +60,6 @@ html {
 
 
 body {
-    background-color:red;
     background-size:cover;
     background-repeat:no-repeat;
     min-height:100vh;
