@@ -11,6 +11,18 @@
     justify-content:flex-start;
     align-items:center;
 
+    
+    @include respond(misc2) {
+        height:50vh;
+    }
+
+    @include respond(misc2) {
+        height:45vh;
+    padding-bottom:3rem;
+        background-position:88% 48%;
+        background-size:30% 40%;
+    }
+
     &__content {
        h2 {
            font-weight: 600;
@@ -56,7 +68,13 @@
         font-size:2rem;
         color:$light_grey;
         margin-bottom:3rem;
+
+        
+        @include respond(misc2) {
+            width:80%;
+        }
     }
+
 
     &__content {
         display:flex;
@@ -66,12 +84,19 @@
         padding:5rem;
 
 
+
         &__box {
             max-height:20rem;
             flex-basis:25%;
             @include flexCenter;
             flex-direction:column;
             text-align:center;
+
+            
+            @include respond(misc2) {
+                flex-basis:100%;
+                margin-bottom:2rem;
+            }
 
             i {
                 font-size:3rem;
@@ -103,6 +128,10 @@
     background-color:$black;
     display:flex;
     align-items: center;
+
+    @include respond(misc1) {
+        flex-wrap:wrap;
+     }
     
 
     &__image {
@@ -111,14 +140,23 @@
         flex-direction:column;
         justify-content: flex-end;
 
+        @include respond(misc1) {
+            flex-basis:100%;
+         }
+
         figure {
             padding-left:3rem;
             padding-right:3rem;
-            height: 50vh;
+            height:40vh;
+
+            @include respond(misc1) {
+               padding-top:3rem;
+             }
 
             img {
                 width:100%;
                 height:100%;
+                object-fit: cover;
             }
         }
     }
@@ -128,6 +166,10 @@
         flex-shrink:0;
         flex-grow:0;
         padding:5rem;
+
+        @include respond(misc1) {
+           flex-basis:100%;
+        }
 
         h4 {
             font-weight:700;
@@ -144,6 +186,12 @@
         .button__box {
             width:70%;
 
+            @include respond(misc1) {
+               width:100%;
+            }
+
+            
+
             a {
                 transition:all .2s;
                 
@@ -153,7 +201,7 @@
                     border:1px solid $blue;
                 }
             }
-            
+
             p {
                 margin:0;
             }
@@ -175,6 +223,10 @@
         text-align:center;
         font-size:1.5rem;
         padding:3rem 0;
+
+        @include respond(tab-port) {
+           width:80%;
+         }
     }
 
     h3 {
@@ -197,12 +249,28 @@
         justify-content: space-between;
         padding:7rem;
 
+        @include respond(misc1) {
+            flex-direction:column;
+         }
+
         &__box {
             flex-basis:30%;
             // height:20rem;
             text-align:center;
             display:flex;
             flex-direction:column;
+
+            // @include respond(misc1) {
+            //     flex-basis:50%;
+            //     flex-wrap:wrap;
+            //  }
+
+            @include respond(misc1) {
+                flex-basis:100%;
+                margin-bottom:3rem;
+               // background-color:red;
+             }
+             
             p {
                 width:100%;
                 text-align: start;
@@ -244,8 +312,12 @@
 }
 
 .gallery {
-    display:flex;
+   display:flex;
    margin-left:1rem;
+
+   @include respond(tab-port) {
+      flex-wrap:wrap;
+   }
 
 
     figure {
@@ -254,6 +326,10 @@
         border:5px solid $black;
         overflow:hidden;
         cursor:pointer;
+
+        @include respond(tab-port) {
+           flex-basis: 100%;
+         }
         
 
         img {
@@ -280,6 +356,21 @@
      width:20%;
      padding:3rem 0;
 
+     @include respond(tab-port) {
+       width:30%;
+    }
+
+    @include respond(phone) {
+        width:40%;
+    }
+
+
+    @include respond(misc4) {
+        width:60%;
+    }
+
+
+
      p {
          color:$white;
      }
@@ -304,6 +395,10 @@
 
    &__links {
        width:50%;
+
+       @include respond(misc1) {
+        width:90%;
+     }
 
        ul {
         @include flexBetween;
